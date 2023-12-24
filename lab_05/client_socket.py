@@ -19,7 +19,6 @@ def main(
     sock.connect(server_address)
 
     sock.send(dict_to_bytes(header))
-    time.sleep(1)
 
     header_type = header.get('type')
     if header_type == 'text':
