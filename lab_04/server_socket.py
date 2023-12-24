@@ -33,6 +33,7 @@ while True:
                     print('.', end='')
                     if not file_data:
                         break
+                file.close()
 
     finally:
         print()

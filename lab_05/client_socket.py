@@ -34,6 +34,7 @@ def main(
             print('.', end='')
             if not file_data:
                 break
+        file.close()
     else:
         raise ValueError(f'Неизвестный тип для передачи: {header_type}')
 
