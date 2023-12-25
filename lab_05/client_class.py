@@ -52,6 +52,10 @@ class ClientSocket:
 
 
 if __name__ == '__main__':
-    client = ClientSocket()
-    client.send_text('Hello')
-    # client.send_text('World')
+    # client = ClientSocket()
+    # client.send_text('Hello World')
+    # client.close_connection()
+
+    client1 = ClientSocket()
+    client1.send_image_jpeg()
+    client1.close_connection()

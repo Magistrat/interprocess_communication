@@ -45,8 +45,7 @@ class ServerSocket:
                         print(self.get_message())
                     elif header_type == 'image/jpeg':
                         self.save_image_jpeg()
-
-            except (Exception, ):
+            finally:
                 self.__client_socket.close()
 
     def get_message(self) -> str:
