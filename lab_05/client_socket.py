@@ -19,6 +19,7 @@ def main(
     sock.connect(server_address)
 
     sock.send(dict_to_bytes(header))
+    time.sleep(0.5)
 
     header_type = header.get('type')
     if header_type == 'text':
@@ -45,12 +46,12 @@ if __name__ == '__main__':
     address = ('localhost', 55005)
 
     header_data = {
-        # 'type': 'text',
-        'type': 'image/jpeg'
+        'type': 'text',
+        # 'type': 'image/jpeg'
     }
     message_data = {
-        # 'data': 'Hello World',
-        'data': file_to_send
+        'data': 'Hello World',
+        # 'data': file_to_send
     }
 
     main(
